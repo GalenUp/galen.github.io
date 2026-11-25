@@ -1,0 +1,10 @@
+.photo-journal .photo-intro { color: var(--text-muted-color); margin: 0 0 2rem; }
+.photo-journal .photo-wall { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-start; }
+.photo-journal .photo-item { flex: var(--photo-ratio) 1 280px; margin: 0; min-width: 0; }
+.photo-journal .photo-item:only-child { flex: 0 1 640px; }
+.photo-journal .photo-item a.img-link { display: block; border: 0 !important; border-radius: 10px; overflow: hidden; box-shadow: none !important; }
+.photo-journal .photo-item img { display: block; width: 100%; height: auto; aspect-ratio: var(--photo-ratio); border-radius: 0; margin: 0; transition: filter .2s ease; }
+.photo-journal .photo-item a:hover img { filter: brightness(1.04); }
+.photo-journal .photo-item a:focus-visible { outline: 3px solid var(--link-color); outline-offset: 4px; }
+@media (max-width: 575px) { .photo-journal .photo-wall { gap: 8px; } .photo-journal .photo-item { flex-basis: 160px; } }
+@media (prefers-reduced-motion: reduce) { .photo-journal .photo-item img { transition: none; } }
